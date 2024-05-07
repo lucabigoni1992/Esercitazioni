@@ -3,9 +3,9 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio Version 17
 VisualStudioVersion = 17.9.34723.18
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Funzioni e array", "..\ConsoleApp4\Funzioni e array.csproj", "{81E2AED7-A752-4FC8-9443-91CEF8A442D8}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Funzioni e array", ".\ConsoleApp4\Funzioni e array.csproj", "{81E2AED7-A752-4FC8-9443-91CEF8A442D8}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Persona", "..\ConsoleApp5\Persona.csproj", "{2605B82C-4BA5-4848-974D-85CE051F2B96}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Persona", ".\ConsoleApp5\Persona.csproj", "{2605B82C-4BA5-4848-974D-85CE051F2B96}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
