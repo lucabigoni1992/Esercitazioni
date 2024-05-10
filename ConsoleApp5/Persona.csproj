@@ -46,8 +46,10 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="DM\Esempio.cs" />
-    <Compile Include="Persona.cs" />
+    <Compile Include="DM\Studente.cs" />
+    <Compile Include="DM\Operaio.cs" />
+    <Compile Include="DM\Persona.cs" />
+    <Compile Include="DM\StudenteUniversitario.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>

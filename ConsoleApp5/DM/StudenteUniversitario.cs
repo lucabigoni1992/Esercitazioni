@@ -6,7 +6,8 @@ using System.Threading.Tasks;
 
 namespace ConsoleApp5.DM
 {
-    internal class Esempio
+    internal class StudenteUniversitario:Studente
     {
+        public string NomeUniversita;
     }
 }

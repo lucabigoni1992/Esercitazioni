@@ -3,7 +3,7 @@
 using Newtonsoft.Json;
 using System;
 
-namespace ConsoleApp5
+namespace ConsoleApp5.DM
 {
     // un nome al singolare
     internal class Persona
@@ -77,6 +77,15 @@ namespace ConsoleApp5
         }
         #endregion GetSet
 
+        private void Test1() { }
+        public void Test2() { }
+        internal void Test3() { }
+        protected void Test4() { }
+
+        /// <summary>
+        /// Funzioe che genera il codice fiscale
+        /// </summary>
+        /// <returns>Il codice fiscale</returns>
         public string GetCodiceFiscale()
         {
             return $"{Nome.Substring(0, 3)}{Cognome.Substring(0, 3)}{AnnoDiNascita}";
