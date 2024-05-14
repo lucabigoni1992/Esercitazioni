@@ -7,9 +7,11 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Funzioni e array", "Console
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Persona", "ConsoleApp5\Persona.csproj", "{2605B82C-4BA5-4848-974D-85CE051F2B96}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Linq", "Linq\Linq.csproj", "{C449AA7A-7A5B-4D6D-B7C3-984A58FA54F0}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Linq", "Linq\Linq.csproj", "{C449AA7A-7A5B-4D6D-B7C3-984A58FA54F0}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Esercizi di vincenzo", "Esercizi di vincenzo\Esercizi di vincenzo.csproj", "{A46B440B-1B21-4E4C-8457-53B41C10D571}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Esercizi di vincenzo", "Esercizi di vincenzo\Esercizi di vincenzo.csproj", "{A46B440B-1B21-4E4C-8457-53B41C10D571}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Esercizi Vincenzo2", "Esercizi Vincenzo2\Esercizi Vincenzo2.csproj", "{7C647741-B156-45CC-8110-0707A559DF77}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -69,6 +71,18 @@ Global
 		{A46B440B-1B21-4E4C-8457-53B41C10D571}.Release|x64.Build.0 = Release|Any CPU
 		{A46B440B-1B21-4E4C-8457-53B41C10D571}.Release|x86.ActiveCfg = Release|Any CPU
 		{A46B440B-1B21-4E4C-8457-53B41C10D571}.Release|x86.Build.0 = Release|Any CPU
+		{7C647741-B156-45CC-8110-0707A559DF77}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{7C647741-B156-45CC-8110-0707A559DF77}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{7C647741-B156-45CC-8110-0707A559DF77}.Debug|x64.ActiveCfg = Debug|Any CPU
+		{7C647741-B156-45CC-8110-0707A559DF77}.Debug|x64.Build.0 = Debug|Any CPU
+		{7C647741-B156-45CC-8110-0707A559DF77}.Debug|x86.ActiveCfg = Debug|Any CPU
+		{7C647741-B156-45CC-8110-0707A559DF77}.Debug|x86.Build.0 = Debug|Any CPU
+		{7C647741-B156-45CC-8110-0707A559DF77}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{7C647741-B156-45CC-8110-0707A559DF77}.Release|Any CPU.Build.0 = Release|Any CPU
+		{7C647741-B156-45CC-8110-0707A559DF77}.Release|x64.ActiveCfg = Release|Any CPU
+		{7C647741-B156-45CC-8110-0707A559DF77}.Release|x64.Build.0 = Release|Any CPU
+		{7C647741-B156-45CC-8110-0707A559DF77}.Release|x86.ActiveCfg = Release|Any CPU
+		{7C647741-B156-45CC-8110-0707A559DF77}.Release|x86.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
