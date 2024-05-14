@@ -32,9 +32,12 @@ namespace Esercizi_di_vincenzo.DataModel
             }
         
         }
+        //----------------Domanda per luca ---------------------------
+        //Perche se overraidato il metodo Tostring il console.Writeline nel foreach non so trasforma ??
         public void Stampalista()
         {
-            Elenco.ForEach(x =>Console.WriteLine(x));
+           // Elenco.ForEach(x =>Console.WriteLine(ToString(x));
+           foreach(var x in Elenco) { Console.WriteLine(JsonConvert.SerializeObject(x)); }
 
 
         }
