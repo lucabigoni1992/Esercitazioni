@@ -10,12 +10,12 @@ namespace Esercizi_di_vincenzo.DataModel
     internal class ElencoPersone
     {
 
-        List<Persone> Elenco;
-        int max;
+        public List<Persone> Elenco;
+        public int max;
 
         public ElencoPersone(int qta)
         {
-           Elenco =new List<Persone>(qta);
+            Elenco = new List<Persone>(qta);
             max = qta;
         }
         public List<Persone> Aggiungi(Persone p)
@@ -30,14 +30,16 @@ namespace Esercizi_di_vincenzo.DataModel
                 Elenco.Add(p);
                 return Elenco;
             }
-        
+
         }
         //----------------Domanda per luca ---------------------------
         //Perche se overraidato il metodo Tostring il console.Writeline nel foreach non so trasforma ??
         public void Stampalista()
         {
-           // Elenco.ForEach(x =>Console.WriteLine(ToString(x));
-           foreach(var x in Elenco) { Console.WriteLine(JsonConvert.SerializeObject(x)); }
+            // Elenco.ForEach(x =>Console.WriteLine(ToString(x));
+            foreach (var x in Elenco) { 
+                Console.WriteLine(x);
+            }
 
 
         }

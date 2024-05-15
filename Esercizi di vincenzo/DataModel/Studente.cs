@@ -38,7 +38,7 @@ namespace Esercizi_di_vincenzo.DataModel
         }
         public void SetUniversità(string uni)
         {
-            if (uni== "")
+            if (string.IsNullOrWhiteSpace(uni))
             {
                 throw new Exception("L'università non è valida");
             }
@@ -61,7 +61,7 @@ namespace Esercizi_di_vincenzo.DataModel
         public string GetUniversità()
 
         {
-                if (Università == " ")
+                if (string.IsNullOrWhiteSpace(Università))
                 {
                     throw new Exception("Uniersità inserita non valida");
                 }

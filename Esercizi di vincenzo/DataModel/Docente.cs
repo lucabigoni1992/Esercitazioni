@@ -4,6 +4,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using static System.Runtime.InteropServices.JavaScript.JSType;
 
 namespace Esercizi_di_vincenzo.DataModel
 {
@@ -26,7 +27,7 @@ namespace Esercizi_di_vincenzo.DataModel
         public List<string>Addmaterie()
         {
             Console.WriteLine("Inserisci materia");
-            string mate = Console.ReadLine();
+            string mate = Console.ReadLine() ?? "";
             Materie.Add(mate);
             return Materie; 
         }
@@ -43,7 +44,7 @@ namespace Esercizi_di_vincenzo.DataModel
         }
         public void Setmaterie(List<string> mate)
         {
-            if (mate == null)
+            if (mate == null|| mate.Count==0)
             { throw new Exception("La lista non è valida"); }
 
             Materie = mate;
@@ -59,12 +60,10 @@ namespace Esercizi_di_vincenzo.DataModel
             }
             return Salario;
         }
-
-
         public List<string> GetMaterie()
 
         {
-            if (Materie == null)
+            if (Materie == null || Materie.Count == 0)
             {
                 throw new Exception("Materie non valide");
             }

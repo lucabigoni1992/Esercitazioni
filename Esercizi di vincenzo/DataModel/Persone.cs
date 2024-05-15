@@ -12,50 +12,50 @@ namespace Esercizi_di_vincenzo.DataModel
         public string Codicefiscale;
         public string Nome;
         public string Cognome;
-        
-/*
-        public Persone() 
-        {
-            Codicefiscale = "";
-            Nome = "ND";
-            Cognome = "ND";
-        
-        }
-*/
+
+        /*
+                public Persone() 
+                {
+                    Codicefiscale = "";
+                    Nome = "ND";
+                    Cognome = "ND";
+
+                }
+        */
 
 
-        public Persone(string Cf, string name,string surname) 
+        public Persone(string Cf, string name, string surname)
         {
             Codicefiscale = Cf;
-            Nome=name;
-            Cognome= surname;
-        
+            Nome = name;
+            Cognome = surname;
+
         }
 
 
         #region GETSET 
 
-        public void setcodicefiscale(string cf)
+        public void Setcodicefiscale(string cf)
         {
-            if (cf == " ")
+            if (string.IsNullOrWhiteSpace(cf))
             {
                 throw new Exception("Codicefiscale vuoto");
             }
             Codicefiscale = cf;
 
         }
-        public void setNome(string name)
+        public void SetNome(string name)
         {
-            if (Nome == " ")
+            if (string.IsNullOrWhiteSpace(Nome))
             {
                 throw new Exception("Nome non valido");
             }
             Nome = name;
 
         }
-        public void setCognome(string surname)
+        public void SetCognome(string surname)
         {
-            if (surname == " ")
+            if (string.IsNullOrWhiteSpace(surname))
             {
                 throw new Exception("Cognome non valido");
             }
@@ -66,7 +66,7 @@ namespace Esercizi_di_vincenzo.DataModel
         public string GetCodicefiscale()
 
         {
-            if (Codicefiscale == " ")
+            if (string.IsNullOrWhiteSpace(Codicefiscale))
             {
                 throw new Exception("Codicefiscale vuoto");
             }
@@ -75,7 +75,7 @@ namespace Esercizi_di_vincenzo.DataModel
         public string GetNome()
 
         {
-            if (Nome == " ")
+            if (string.IsNullOrWhiteSpace(Nome))
             {
                 throw new Exception("Nome non valido");
             }
@@ -84,14 +84,18 @@ namespace Esercizi_di_vincenzo.DataModel
         public string GetCognome()
 
         {
-            if (Cognome == " ")
+            if (string.IsNullOrWhiteSpace(Cognome))
             {
                 throw new Exception("Cognome non valido");
             }
             return Cognome;
         }
-        #endregion 
+        #endregion
+        public override string ToString()
+        {
+            return JsonConvert.SerializeObject(this);
 
-       
+        }
+
     }
 }
