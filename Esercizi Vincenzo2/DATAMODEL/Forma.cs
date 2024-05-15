@@ -17,7 +17,10 @@ namespace Esercizi_Vincenzo2.DATAMODEL
             NomeForma= name;
         
         }
-
-
+        /*
+         Vorrei vedere due metodi virtuali che vengono poi sovrascritti nelle classi figlie
+        -uno per il perimetro
+        -uni per l'area
+         */
     }
 }

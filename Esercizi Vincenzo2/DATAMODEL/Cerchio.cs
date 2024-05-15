@@ -8,6 +8,7 @@ namespace Esercizi_Vincenzo2.DATAMODEL
 {
     internal class Cerchio:Forma
     {
+        private const double PI = 3.14;
         public double Raggio;
 
 
@@ -16,10 +17,9 @@ namespace Esercizi_Vincenzo2.DATAMODEL
             Raggio = ragg;
 
         }
-
         public double Area()
         {
-            double Area = (Raggio * Raggio) * 3.14;
+            double Area = (Raggio * Raggio) * PI;
             return Area;
 
         }

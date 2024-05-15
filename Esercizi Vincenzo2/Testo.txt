@@ -1,0 +1,6 @@
+﻿
+Realizzare una classe base Forma che rappresenti una forma geometrica, 
+e che preveda dei parametri come colore e nome forma un metodo per stampare a video le dimensioni e un metodo a piacere,
+Implementare le classi concrete Rettagolo e Cerchio che derivano da forma che abbiano i metodi calcolare il perimetro e calcolare l'area.  e opportuni parametri.
+ Relaizzare poi una classe Programma che permetta all'utente di inserire degli oggetti di tipo Forma da tastiera.
+ memorizzare i dati in 2 array uno per ogni classe figlia e stampare tutti i dati del perimetri e delle aree
