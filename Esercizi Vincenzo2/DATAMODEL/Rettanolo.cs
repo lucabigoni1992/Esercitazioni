@@ -19,15 +19,56 @@ namespace Esercizi_Vincenzo2.DATAMODEL
             Altezza = h;
         }
 
+        #region SETGET
 
-        public double Perimetro(int bas, int altez)
+        public void SetBase(double bas)
         {
-            double perimetro =(2 *bas) + (2*altez);
+            if (bas==0)
+            {
+                throw new Exception("Valore non valido");
+            }
+            Base = bas;
+        
+        }
+        public void SetAltezza(double h)
+        {
+            if (h == 0)
+            {
+                throw new Exception("Valore non valido");
+            }
+            Altezza=h;
+
+        }
+
+        public double GetBase()
+        {  
+            if(Base==0)
+            { 
+                throw new Exception("Valore uguale a 0 "); 
+            }
+            return Base; 
+        }
+        public double GetAltezza()
+        {
+            if (Altezza == 0)
+            {
+                throw new Exception("Valore uguale a 0 ");
+            }
+            return Altezza ;
+        }
+
+        #endregion
+
+        //--------------------------PER LUCA------------------------------
+        // gli overraid posso essere usati solo su metodi con gli stessi parametri di ingresso ?
+        public override double Perimetro()
+        {
+            double perimetro =(2 *Base) + (2*Altezza);
             return perimetro;
         }
-        public double Area(int bas,int altez)
+        public override double Area()
         {
-            double are = bas * altez;
+            double are = Base * Altezza;
             return are;
 
         }
