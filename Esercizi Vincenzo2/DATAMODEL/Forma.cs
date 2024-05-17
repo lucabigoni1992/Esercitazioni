@@ -17,8 +17,7 @@ namespace Esercizi_Vincenzo2.DATAMODEL
     {
         public string Colore;
         public string NomeForma;
-        private double Base;
-        private double Altezza;
+        
 
         public Forma(string Color, string name)
         {
@@ -28,7 +27,7 @@ namespace Esercizi_Vincenzo2.DATAMODEL
 
         #region setget
         
-        public string GetColore()
+        public  string GetColore()
         {
             if(string.IsNullOrEmpty(Colore))
             {
@@ -36,7 +35,7 @@ namespace Esercizi_Vincenzo2.DATAMODEL
             }
             return Colore;
         }
-        public string GetNomeForma() 
+        public  string GetNomeForma() 
         { 
             if (string.IsNullOrEmpty(NomeForma))
             { 
@@ -77,11 +76,15 @@ namespace Esercizi_Vincenzo2.DATAMODEL
             return are;
 
         }
-        
+        public virtual string Tostring()
+        {
+             return $"NomeForma: {NomeForma} - Colore: {Colore} ";
+         }
 
 
 
+
+
+        }
 
     }
-
-}

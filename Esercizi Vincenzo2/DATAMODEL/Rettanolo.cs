@@ -21,6 +21,14 @@ namespace Esercizi_Vincenzo2.DATAMODEL
 
         #region SETGET
 
+        public string GetNome()
+        {
+            return NomeForma;
+        }
+        public string GetColorex()
+        {
+            return Colore;
+        }
         public void SetBase(double bas)
         {
             if (bas==0)
@@ -71,6 +79,10 @@ namespace Esercizi_Vincenzo2.DATAMODEL
             double are = Base * Altezza;
             return are;
 
+        }
+        public override string ToString()
+        {
+            return $"NomeForma: {NomeForma} - Colore: {Colore} - Perimetro: {this.Perimetro()} - Area: {this.Area()} ";
         }
 
     }

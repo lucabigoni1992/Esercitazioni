@@ -38,7 +38,7 @@ namespace Esercizi_Vincenzo2.DATAMODEL
         }
 
         #endregion
-        internal double Diametro()
+        public  double Diametro()
         {
             double Diametro = 2 * Raggio;
             return Diametro;
@@ -53,9 +53,13 @@ namespace Esercizi_Vincenzo2.DATAMODEL
 
         public override double Perimetro()
         {
-            double perimetro = 2 * (PI + Raggio);
+            double perimetro = 2 * (PI * Raggio);
             return perimetro;
 
+        }
+        public override string ToString()
+        {
+            return $"NomeForma: {NomeForma} - Colore: {Colore} - Perimetro: {this.Perimetro()} - Area: {this.Area()} ";
         }
 
 
