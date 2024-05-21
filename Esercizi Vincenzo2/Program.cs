@@ -50,7 +50,7 @@ namespace Esercizi_Vincenzo2
 
                             //----------------- per luca-------------
                             //Perche non riesco a stampare con interpolazione i metodi get ma si i valori dentro array?
-                            //Console.WriteLine($"NomeForma: {circle.GetNomeForma} - Colore: {circle.GetColore} - Perimetro: {DatiCerchio[3]} - Area: {DatiCerchio[2]} ");
+                            Console.WriteLine($"NomeForma: {circle.GetNomeForma()} - Colore: {circle.GetColore()} - Perimetro: {DatiCerchio[3]} - Area: {DatiCerchio[2]} ");
 
 
                                 break;
@@ -68,7 +68,7 @@ namespace Esercizi_Vincenzo2
 
                            //----------------- per luca-------------
                            //Perche non riesco a stampare con interpolazione i metodi get ma si i valori dentro array?
-                            //Console.WriteLine($"NomeForma: {retta1.GetNome} - Colore: {retta1.GetColore} - Perimetro: {DatiRettangolo[1]} - Area: {DatiRettangolo[0]} ");
+                            Console.WriteLine($"NomeForma: {retta1.GetNome()} - Colore: {retta1.GetColore()} - Perimetro: {DatiRettangolo[1]} - Area: {DatiRettangolo[0]} ");
 
                             Console.WriteLine(retta1);
 
