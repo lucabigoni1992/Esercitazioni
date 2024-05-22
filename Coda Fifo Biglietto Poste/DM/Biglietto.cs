@@ -40,7 +40,22 @@ namespace Coda_Fifo_Biglietto_Poste.DM
 
         public override string ToString()
         {
-            return $"Hai il biglietto n° {nBiglietto}, Staccato alle {OrarioIngresso}, di tipo {Tiplologia}";
+            return $"Ci sono in coda i biglietti n° {nBiglietto}, Staccato alle {OrarioIngresso}, di tipo {Tiplologia}";
+        }
+
+        //creo il metodo GetTipo 
+        public int GetTipo()
+        {
+
+            
+            return Convert.ToInt32(Tiplologia);
+        }
+        // Creo il metodo GetNbiglietto
+
+        public int GetNbiglietto()
+        {
+            return nBiglietto;
+
         }
 
     }

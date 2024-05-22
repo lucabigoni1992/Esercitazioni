@@ -29,13 +29,14 @@ namespace Coda_Fifo_Biglietto_Poste.DM
         }
         public bool Dequeque()
         {
-            if (Coda.Count== 0)
+            if (Coda.Count == 0)
             {
                 return false;
             }
             Console.WriteLine(Coda[0]);
             Coda.RemoveAt(0);//rimuoviamo il biglietto all'indice 0
             return true;
+
         }
 
         //implementa delle funzionalità:
@@ -47,11 +48,78 @@ namespace Coda_Fifo_Biglietto_Poste.DM
         Telefonia : 30 persona         
          */
 
+        //--------soluzione-------------
+        public void  StampaPerTipo()
+            {
+            int spedi=0;
+            int fina = 0;
+            int Tele = 0;
+
+
+            for (var i = 0;i<Coda.Count; i++)
+            {
+                if (Coda[i].GetTipo()==0)
+                {
+                    spedi++;
+                }
+                if (Coda[i].GetTipo()==1)
+                {
+                    fina++;
+                }
+                if (Coda[i].GetTipo() == 2)
+                {
+                    Tele++;
+                }
+
+            }
+
+            Console.WriteLine($"Ci sono :{spedi} nella sezione Spedizione\nCi sono :{fina} nella sezione Finanza\nCi sono :{Tele} nella sezione Telefonia ");
+        }
+
 
         //stampare a schermo tutti gli elementi nella lista
 
+        public void Stampatutto()
+        {
+            for (int i = 0; i < Coda.Count; i++)
+            {
+                Console.WriteLine(Coda[i]);
+            }
+
+        }
+
         //una funzione che prende in ingresso un numero e dice se quel numero è presente o meno nella lista (deve restituire un bool )
 
+        public bool CercaNbiglietto()
+        {
+            int numero;
+            string valore;
+            do
+            {
+                Console.WriteLine("inserisci N del biglietto da cercare");
+                
+                valore = Console.ReadLine() ?? "-1";
+
+            }
+            while (!int.TryParse(valore, out numero ));
+
+            if (numero>Coda.Count)
+            {
+                Console.WriteLine("il numero del biglietto e maggiore del numero totale di biglietti");
+                return false;
+            }
+            for (int i = 0;i<Coda.Count;i++)
+            {
+                if (Coda[i].GetNbiglietto()==numero)
+                {
+                    Console.WriteLine("il  biglietto e Presente");
+                    return true;
+                }
+
+            }
+            Console.WriteLine("il  biglietto NON e Presente");
+            return false;
+        }
 
 
     }
