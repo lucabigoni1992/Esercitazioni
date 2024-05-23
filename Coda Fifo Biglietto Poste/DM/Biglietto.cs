@@ -6,21 +6,15 @@ using System.Threading.Tasks;
 
 namespace Coda_Fifo_Biglietto_Poste.DM
 {
-    public enum TipoBiglietto
-    {
-        None = -1,
-        Spedizione = 0,
-        Finanza = 1,
-        Telefonia = 2
-    }
     public class Biglietto
     {
 
         //le variabili di tipo static sono condivise tra  le varie istanze della classe quindi se una la modifica, è modificata per tutte
         private static int _instance = 0;
-        private int nBiglietto;
-        private TipoBiglietto Tiplologia;
-        private DateTime OrarioIngresso;
+        protected int nBiglietto;
+        protected TipoBiglietto Tiplologia;
+        protected DateTime OrarioIngresso;
+        protected TipoPriorita Caratteristica =TipoPriorita.Base;
         public Biglietto()
         {
             nBiglietto = _instance;
@@ -44,11 +38,9 @@ namespace Coda_Fifo_Biglietto_Poste.DM
         }
 
         //creo il metodo GetTipo 
-        public int GetTipo()
+        public TipoBiglietto GetTipo()
         {
-
-            
-            return Convert.ToInt32(Tiplologia);
+            return Tiplologia;
         }
         // Creo il metodo GetNbiglietto
 
@@ -56,6 +48,14 @@ namespace Coda_Fifo_Biglietto_Poste.DM
         {
             return nBiglietto;
 
+        }
+        public virtual string Stampa1()
+        {
+            return $"S1 Biglietto: {nBiglietto}";
+        }
+        public string Stampa2()
+        {
+            return $"S2 Biglietto: {nBiglietto}";
         }
 
     }

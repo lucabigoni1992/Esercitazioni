@@ -18,13 +18,21 @@ namespace Coda_Fifo_Biglietto_Poste.DM
         }
 
 
-        public bool Enqueque(TipoBiglietto tb)
+        public bool Enqueque(TipoBiglietto tb, TipoPriorita tp=TipoPriorita.Base)
         {
             if (Coda.Count >= 100 || tb == TipoBiglietto.None)
             {
                 return false;
             }
-            Coda.Add(new Biglietto(tb));
+            switch (tp)
+            {
+                case TipoPriorita.Base:
+                    Coda.Add(new Biglietto(tb));
+                    break;
+                case TipoPriorita.Prioritario:
+                    Coda.Add(new BigliettoSpecial(tb));
+                    break;
+            }
             return true;
         }
         public bool Dequeque()
@@ -58,36 +66,31 @@ namespace Coda_Fifo_Biglietto_Poste.DM
 
             for (var i = 0;i<Coda.Count; i++)
             {
-                int app = Coda[i].GetTipo();
+                TipoBiglietto app = Coda[i].GetTipo();
                 switch(app)
                 {
-                    case 0: spedi++;
+                    case TipoBiglietto.Spedizione: spedi++;
                         break;
-                    case 1: fina++;
+                    case TipoBiglietto.Finanza: fina++;
                         break;
-                    case 2: Tele++;
+                    case TipoBiglietto.Telefonia: Tele++;
                         break;
-                
-                
-                
                 }    
-                /* --metodo 2--
-                
-                if (Coda[i].GetTipo()==0)
+                // --metodo 2--
+                /*
+                if (Coda[i].GetTipo()==TipoBiglietto.Spedizione)
                 {
                     spedi++;
                 }
-                if (Coda[i].GetTipo()==1)
+               else if (Coda[i].GetTipo()==TipoBiglietto.Finanza)
                 {
                     fina++;
                 }
-                if (Coda[i].GetTipo() == 2)
+                else if (Coda[i].GetTipo() == TipoBiglietto.Telefonia)
                 {
                     Tele++;
                 }
                 */
-                
-
             }
 
             Console.WriteLine($"Ci sono :{spedi} nella sezione Spedizione\nCi sono :{fina} nella sezione Finanza\nCi sono :{Tele} nella sezione Telefonia ");
@@ -98,18 +101,32 @@ namespace Coda_Fifo_Biglietto_Poste.DM
 
         public void Stampatutto()
         {
-            foreach(var a in Coda)
+            /*Corretto levato solo per esempio
+             * foreach(var a in Coda)
             {
                 Console.WriteLine(a);
-            }
-            
-            
-          /* metodo 2
-            for (int i = 0; i < Coda.Count; i++)
+            }*/
+
+
+            Console.WriteLine("Stampa1:");
+            Console.WriteLine("");
+            foreach (var a in Coda)
             {
-                Console.WriteLine(Coda[i]);
+                Console.WriteLine(a.Stampa1());
             }
-          */
+            Console.WriteLine("");
+            Console.WriteLine("Stampa2:");
+            foreach (var a in Coda)
+            {
+                Console.WriteLine(a.Stampa2());
+            }
+            Console.WriteLine("");
+            /* metodo 2
+              for (int i = 0; i < Coda.Count; i++)
+              {
+                  Console.WriteLine(Coda[i]);
+              }
+            */
 
         }
 
@@ -121,10 +138,8 @@ namespace Coda_Fifo_Biglietto_Poste.DM
             string valore;
             do
             {
-                Console.WriteLine("inserisci N del biglietto da cercare");
-                
+                Console.WriteLine("inserisci N del biglietto da cercare");                
                 valore = Console.ReadLine() ?? "-1";
-
             }
             while (!int.TryParse(valore, out numero ));
 
@@ -140,7 +155,6 @@ namespace Coda_Fifo_Biglietto_Poste.DM
                     Console.WriteLine("il  biglietto e Presente");
                     return true;
                 }
-
             }
             Console.WriteLine("il  biglietto NON e Presente");
             return false;
