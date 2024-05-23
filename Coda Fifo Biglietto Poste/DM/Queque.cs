@@ -58,6 +58,21 @@ namespace Coda_Fifo_Biglietto_Poste.DM
 
             for (var i = 0;i<Coda.Count; i++)
             {
+                int app = Coda[i].GetTipo();
+                switch(app)
+                {
+                    case 0: spedi++;
+                        break;
+                    case 1: fina++;
+                        break;
+                    case 2: Tele++;
+                        break;
+                
+                
+                
+                }    
+                /* --metodo 2--
+                
                 if (Coda[i].GetTipo()==0)
                 {
                     spedi++;
@@ -70,6 +85,8 @@ namespace Coda_Fifo_Biglietto_Poste.DM
                 {
                     Tele++;
                 }
+                */
+                
 
             }
 
@@ -81,10 +98,18 @@ namespace Coda_Fifo_Biglietto_Poste.DM
 
         public void Stampatutto()
         {
+            foreach(var a in Coda)
+            {
+                Console.WriteLine(a);
+            }
+            
+            
+          /* metodo 2
             for (int i = 0; i < Coda.Count; i++)
             {
                 Console.WriteLine(Coda[i]);
             }
+          */
 
         }
 
