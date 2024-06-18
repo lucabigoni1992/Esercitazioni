@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace Coda_Fifo_Biglietto_Poste.DM
 {
-    public class Biglietto
+    public class Biglietto: BaseBiglietto
     {
 
         //le variabili di tipo static sono condivise tra  le varie istanze della classe quindi se una la modifica, è modificata per tutte
@@ -38,13 +38,13 @@ namespace Coda_Fifo_Biglietto_Poste.DM
         }
 
         //creo il metodo GetTipo 
-        public TipoBiglietto GetTipo()
+        public override TipoBiglietto GetTipo()
         {
             return Tiplologia;
         }
         // Creo il metodo GetNbiglietto
 
-        public int GetNbiglietto()
+        public override int GetNbiglietto()
         {
             return nBiglietto;
 
@@ -53,7 +53,7 @@ namespace Coda_Fifo_Biglietto_Poste.DM
         {
             return $"S1 Biglietto: {nBiglietto}";
         }
-        public string Stampa2()
+        public override string Stampa2()
         {
             return $"S2 Biglietto: {nBiglietto}";
         }
