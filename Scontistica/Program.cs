@@ -1,4 +1,5 @@
 ﻿
+using Classivirtuali_astratte_ereditarieta.BLL;
 using Classivirtuali_astratte_ereditarieta.DM;
 
 Console.WriteLine("Benvenuto Nel programma di Scontistica");
