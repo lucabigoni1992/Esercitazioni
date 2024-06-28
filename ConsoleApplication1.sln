@@ -23,11 +23,13 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "04Classi - virtuali astratt
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Argomenti Correlati", "Argomenti Correlati", "{CD931FDE-1B19-492B-BBE2-C7C009E75DCB}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Esercizi di vincenzo-Classe astratte", "Esercizi Classe astratte\Esercizi di vincenzo-Classe astratte.csproj", "{17255A14-5EEE-4CD4-B8AE-6E1A97812DC5}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Esercizi di vincenzo-Classe astratte", "Esercizi Classe astratte\Esercizi di vincenzo-Classe astratte.csproj", "{17255A14-5EEE-4CD4-B8AE-6E1A97812DC5}"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "05Interfacce", "05Interfacce\05Interfacce.csproj", "{003EFAAC-0EE6-4D34-9242-34287B0E8401}"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "06Tipi Generici", "06Tipi Generici\06Tipi Generici.csproj", "{49E91C69-13FC-488E-AC3A-885AEBB5C6A5}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Esercizi di Vincenzo-Interfacce", "Esercizi di Vincenzo-Interfacce\Esercizi di Vincenzo-Interfacce.csproj", "{D7D9E265-7221-4220-A472-0A79E2598852}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -171,6 +173,18 @@ Global
 		{49E91C69-13FC-488E-AC3A-885AEBB5C6A5}.Release|x64.Build.0 = Release|Any CPU
 		{49E91C69-13FC-488E-AC3A-885AEBB5C6A5}.Release|x86.ActiveCfg = Release|Any CPU
 		{49E91C69-13FC-488E-AC3A-885AEBB5C6A5}.Release|x86.Build.0 = Release|Any CPU
+		{D7D9E265-7221-4220-A472-0A79E2598852}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{D7D9E265-7221-4220-A472-0A79E2598852}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{D7D9E265-7221-4220-A472-0A79E2598852}.Debug|x64.ActiveCfg = Debug|Any CPU
+		{D7D9E265-7221-4220-A472-0A79E2598852}.Debug|x64.Build.0 = Debug|Any CPU
+		{D7D9E265-7221-4220-A472-0A79E2598852}.Debug|x86.ActiveCfg = Debug|Any CPU
+		{D7D9E265-7221-4220-A472-0A79E2598852}.Debug|x86.Build.0 = Debug|Any CPU
+		{D7D9E265-7221-4220-A472-0A79E2598852}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{D7D9E265-7221-4220-A472-0A79E2598852}.Release|Any CPU.Build.0 = Release|Any CPU
+		{D7D9E265-7221-4220-A472-0A79E2598852}.Release|x64.ActiveCfg = Release|Any CPU
+		{D7D9E265-7221-4220-A472-0A79E2598852}.Release|x64.Build.0 = Release|Any CPU
+		{D7D9E265-7221-4220-A472-0A79E2598852}.Release|x86.ActiveCfg = Release|Any CPU
+		{D7D9E265-7221-4220-A472-0A79E2598852}.Release|x86.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
@@ -180,6 +194,7 @@ Global
 		{A46B440B-1B21-4E4C-8457-53B41C10D571} = {C8671B62-B516-4E68-8CB8-4D133152E92C}
 		{7C647741-B156-45CC-8110-0707A559DF77} = {C8671B62-B516-4E68-8CB8-4D133152E92C}
 		{17255A14-5EEE-4CD4-B8AE-6E1A97812DC5} = {C8671B62-B516-4E68-8CB8-4D133152E92C}
+		{D7D9E265-7221-4220-A472-0A79E2598852} = {C8671B62-B516-4E68-8CB8-4D133152E92C}
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
 		SolutionGuid = {2D11BE3C-78E1-4F61-911E-D2524107A913}
